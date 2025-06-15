@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matheus - Desenvolvedor Front End</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <button class="btn-abrir-menu" aria-label="Abrir menu" onclick="abrirMenu()">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <nav class="menu">
+    <ul>
+      <li><button onclick="scrollToSection('inicio')">Início</button></li>
+      <li><button onclick="scrollToSection('sobre')">Sobre</button></li>
+      <li><button onclick="scrollToSection('projetos')">Projetos</button></li>
+      <li><button onclick="scrollToSection('contato')">Contato</button></li>
+      <li><button id="btn-tema" onclick="alternarTema()" aria-label="Alternar tema">🌙</button></li>
+      <li><button id="btn-lang" aria-label="Alternar idioma">🇧🇷</button></li>
+    </ul>
+  </nav>
+
+  <div class="menu-mobile" id="menuMobile">
+    <div class="btn-fechar">
+      <button onclick="fecharMenu()" aria-label="Fechar menu"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <nav>
+      <ul>
+        <li><button onclick="scrollToSection('inicio')">Início</button></li>
+        <li><button onclick="scrollToSection('sobre')">Sobre</button></li>
+        <li><button onclick="scrollToSection('projetos')">Projetos</button></li>
+        <li><button onclick="scrollToSection('contato')">Contato</button></li>
+        <li><button id="btn-tema-mobile" onclick="alternarTema()" aria-label="Alternar tema">🌙</button></li>
+        <li><button id="btn-lang">🇧🇷</button></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section id="inicio" class="secao">
+    <div class="container-inicio">
+      <div class="lado-esquerdo fade-in">
+        <h1>Olá, sou um<br />Desenvolvedor<br /><span class="destaque">Front-End</span></h1>
+      </div>
+      <div class="lado-direito fade-in">
+        <img src="img/foto-matheus.jpg" alt="Foto de Matheus" class="foto-redonda" />
+        <h2>Matheus</h2>
+        <p class="profissao">Desenvolvedor Front-End</p>
+        <p class="bio">Apaixonado por tecnologia, criativo e focado em interfaces modernas.</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="especialidades">
+      <div class="interface">
+        <h2 class="titulo">Minhas Especialidades.</h2>
+        <div class="flex">
+          <div class="especialidades-box">
+            <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML5" />
+            <h3>HTML5</h3>
+            <p>Desenvolvimento de estruturas semânticas, acessíveis e otimizadas para SEO e performance.</p>
+          </div>
+          <div class="especialidades-box">
+            <img src="https://img.icons8.com/color/48/css3.png" alt="CSS3" />
+            <h3>CSS</h3>
+            <p>Estilização moderna com animações, responsividade e foco em design limpo e agradável.</p>
+          </div>
+          <div class="especialidades-box">
+            <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript" />
+            <h3>JavaScript</h3>
+            <p>Interatividade, manipulação de DOM, lógica de programação e integração com APIs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projetos">
+      <div class="interface">
+        <h2 class="titulo">Meus Projetos</h2>
+        <div class="flex">
+          <div class="projetos-box">
+            <h3>Projeto 1</h3>
+            <p>Projeto de download de vídeos com suporte a múltiplos idiomas e tema escuro/claro.</p>
+          </div>
+          <div class="projetos-box">
+            <h3>Projeto 2</h3>
+            <p>Portfólio moderno com animações, barra de navegação responsiva e layout flexível.</p>
+          </div>
+          <div class="projetos-box">
+            <h3>Projeto 3</h3>
+            <p>Landing page de calistenia com foco em marketing digital e engajamento no Instagram.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="formulario">
+      <div class="interface">
+        <h2 class="titulo">Entre em contato comigo</h2>
+        <form>
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu email" required />
+          <textarea placeholder="Sua mensagem" required></textarea>
+          <div class="btn-enviar">
+            <input type="submit" value="ENVIAR" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="interface">
+      <div class="line-footer">
+        <div class="flex">
+          <div class="logo-footer">
+            <img src="img/logo.png" alt="Logo do Projeto" />
+          </div>
+          <div class="btn-social">
+            <a href="#"><button><i class="bi bi-github"></i></button></a>
+            <a href="https://www.instagram.com/jbarrosneto_/"><button><i class="bi bi-instagram"></i></button></a>
+            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+          </div>
+        </div>
+      </div>
+      <div class="line-footer borda">
+        <p><i class="bi bi-envelope-fill"></i> <a href="mailto:contato@gmail.com">contato@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="animações.js"></script>
+</body>
+
+</html>
